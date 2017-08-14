@@ -1,10 +1,9 @@
-# praytime-community
+# geolocation
 
 ### Features
-get lat & long from browser then looking fot city information using openstreetmap.
+Get latitude & longitude from browser then looking fot city information using openstreetmap.
 
 ### Tech
-praytime-community uses a number of open source projects to work properly:
 
 * [Nominatim] from openstreetmap
 * [JavaScript]
