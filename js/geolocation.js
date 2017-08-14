@@ -14,13 +14,19 @@ function initGeolocation()
 
 function success(position)
 {
-    document.getElementById('long').value = position.coords.longitude;
-    document.getElementById('lat').value = position.coords.latitude
-    console.log("latitude: " + lat + ", longitute: " + long );
+    if (position.coords.longitude) {
+        document.getElementById('longitude').innerHTML = position.coords.longitude;
+        document.getElementById('latitude').innerHTML = position.coords.latitude;
+
+        var urlOsm = "https://nominatim.openstreetmap.org/reverse?format=json&lat="+position.coords.latitude+"&lon="+position.coords.longitude+"&zoom=6&addressdetails=1";
+        $.getJSON(urlOsm, function (osmResults) {
+            document.getElementById('ville').innerHTML = osmResults.address.town;
+            console.log(osmResults);
+        });
+    }
 }
 
 function fail()
 {
         // Could not obtain location
-        // http://nominatim.openstreetmap.org/reverse?format=xml&lat=48.849919799999995&lon=2.6370411&zoom=18&addressdetails=1
 }

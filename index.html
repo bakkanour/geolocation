@@ -1,4 +1,3 @@
-<!--
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,7 +5,6 @@
     <title>Geolocation</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/default.css">
-    <script type="text/javascript" src="js/geolocation.js"></script>
   </head>
 
   <body onLoad="initGeolocation();">
@@ -15,28 +13,17 @@
         <div class="col-xs-12 col-lg-12">
           <div class="jumbotron">
             <h1 class="text-center">Geolocation:</h1>
-            <p id="">Ville: </p>
-            <p id="lat">Latitude: </p>
-            <p id="long">Longitude: </p>
-            <FORM NAME="rd" METHOD="POST" ACTION="index.html">
-              <INPUT TYPE="text" NAME="long" ID="long" VALUE="">
-              <INPUT TYPE="text" NAME="lat" ID="lat" VALUE="">
+            <p id="">Ville: <span id="ville">Nothing yet</span></p>
+            <p>Longitude: <span id="latitude"></span></p>
+            <p>Latitude: <span id="longitude"></span></p>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="js/geolocation.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+
   </body>
 </html>
--->
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <script type="text/javascript" src="js/geolocation.js"></script>
-  </head>
-
- <body onLoad="initGeolocation();">
-   <FORM NAME="rd" METHOD="POST" ACTION="index.html">
-     <INPUT TYPE="text" NAME="long" ID="long" VALUE="">
-     <INPUT TYPE="text" NAME="lat" ID="lat" VALUE="">
